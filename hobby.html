@@ -1,95 +1,106 @@
 <html>
-  <head>
+
+<head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,400,700&display=swap" rel="stylesheet">
     <title>Hobby</title>
-  </head>
-  <body>
-    <div class="header">
-  <div class="inner_header">
-    <div class="logo_container">
-      <a href="steinegger.html" class="logo_container" style="clear:left;">
-      <h1>Benno&nbsp;<span>Steinegger</span></h1>
-      </a>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <a href="steinegger.html" class="logo">
+          Benno <span class="ste">Steinegger</span>
+          </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="fachrichtung.html">Fachrichtung</a></li>
+            <li><a href="index.html">startseite</a></li>
+
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+
+    <script src="app.js">
+    </script>
+    <div class="parallax">
+        <div class="parallaxheader">
+            <h3>Fotografie <br> - <br> Hobby</h3>
+
+        </div>
+        <section>
+            <br><br>
+            <h1>fotografie</h1>
+            <br>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+            </p>
+            <div class="slidershow middle">
+
+                <div class="slides">
+
+                    <input type="radio" name="r" id="r1" checked>
+                    <input type="radio" name="r" id="r2">
+                    <input type="radio" name="r" id="r3">
+                    <input type="radio" name="r" id="r4">
+                    <input type="radio" name="r" id="r5">
+                    <div class="slide s1">
+                        <img src="bilder/klipp.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="bilder/schaf.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="bilder/gas.jpeg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="bilder/weiher.jpeg" alt="">
+                    </div>
+                    <div class="imgnavigation">
+                        <label for="r1" class="bar"></label>
+                        <label for="r2" class="bar"></label>
+                        <label for="r3" class="bar"></label>
+                        <label for="r4" class="bar"></label>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
     </div>
-      <ul class="navigation">
-        <a href="hobby.html" class = "liheader"><li>Hobby</li></a>
-        <a href="fachrichtung.html" class = "liheader"><li>Fachrichtung</li></a>
-        <a href="index.html" class = "liheader"><li>startseite</li></a>
-      </ul>
-
-  </div>
-</div>
-<div class="parallax">
-    <div class="parallaxheader">
-      <h3>Fotografie <br> - <br> Hobby</h3>
-
-    </div>
-    <section>
-      <br><br>
-      <h1>fotografie</h1>
-      <br>
-      <p>
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-      </p>
-      <div class="slidershow middle">
-
-        <div class="slides">
-
-            <input type="radio" name="r" id="r1" checked>
-            <input type="radio" name="r" id="r2">
-            <input type="radio" name="r" id="r3">
-            <input type="radio" name="r" id="r4">
-            <input type="radio" name="r" id="r5">
-            <div class="slide s1">
-              <img src="bilder/klipp.jpeg" alt="">
-            </div>
-            <div class="slide">
-              <img src="bilder/schaf.jpg" alt="">
-            </div>
-            <div class="slide">
-              <img src="bilder/gas.jpeg" alt="">
-            </div>
-            <div class="slide">
-              <img src="bilder/weiher.jpeg" alt="">
-            </div>
-            <div class="imgnavigation">
-              <label for="r1" class="bar"></label>
-              <label for="r2" class="bar"></label>
-              <label for="r3" class="bar"></label>
-              <label for="r4" class="bar"></label>
-            </div>
-      </div>
-
-    </div>
-
-  </section>
-  </div>
-  <p class="button1">
-    <a href="steinegger.html" id = "button">
-      <button type="button" name="button">HOME</button>
-    </a>
-  </p>
+    <p class="button1">
+        <a href="steinegger.html" id="button">
+            <button type="button" name="button">HOME</button>
+        </a>
+    </p>
 
 
 
     <!--LOADING ANIMATION-->
 
-  <div class="loader-wrapper">
-    <span class="loader"><span class="loader-inner"></span></span>.
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>.
     </div>
-  <script>
-    $(window).on("load",function(){
-      $(".loader-wrapper").delay(1500).fadeOut("slow");
-    });
-</script>
+    <script>
+        $(window).on("load", function() {
+            $(".loader-wrapper").delay(1500).fadeOut("slow");
+        });
+    </script>
 
 
 
 
 
-  </body>
+</body>
 
 </html>

@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,400,700&display=swap" rel="stylesheet">
+
+    <!-- fuer FF, Chrome, Opera -->
+    <link rel="icon" type="bilder/icon" href="/assets/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="bilder/icon" href="/assets/favicons/favicon-32x32.png" sizes="32x32">
+
+    <!-- fuer olte (internet explorer) -->
+    <link rel="icon" type="bilder/icon" href="/assets/favicons/favicon.ico">
+    <link rel="shortcut icon" type="bilder/icon" href="/assets/favicons/favicon.ico" />
+
+    <title>Home</title>
+</head>
+
+<body>
+
+
+    <nav>
+        <div class="logo"> <a href="steinegger.html" class="navschrift"> Benno <span class="ste">Steinegger</span></a></div>
+        <ul class="nav-links">
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="fachrichtung.html">Fachrichtung</a></li>
+            <li><a href="index.html">startseite</a></li>
+
+        </ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    <div class="container">
+
+        <h1 class="lax" data-lax-translate-y="0 0, 400 -400">Hobby</h1>
+        <div class="line"></div>
+
+    </div>
+
+
+    <div class="container2">
+        <h2 class="hob">fotografie</h2>
+        <br>
+        <p class="subtext">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+            survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem Ipsum
+        </p>
+
+
+    </div>
+    <img src="bilder/abschluss.jpg" alt="" class="panorama">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/lax.js">
+        window.onload = function() {
+            lax.setup() // init
+
+            const updateLax = () => {
+                lax.update(window.scrollY)
+                window.requestAnimationFrame(updateLax)
+            }
+
+            window.requestAnimationFrame(updateLax)
+        }
+    </script>
+
+
+    <script src="app.js">
+    </script>
+
+
+
+
+    <!-- ------------
+    <div class="header">
+      <div class="inner_header">
+        <div class="logo_container">
+          <a href="steinegger.html" class="logo_container" style="clear:left;">
+          <h1>Benno&nbsp;<span>Steinegger</span></h1>
+          </a>
+        </div>
+          <ul class="navigation">
+            <a href="hobby.html" class = "liheader"><li>Hobby</li></a>
+            <a href="fachrichtung.html" class = "liheader"><li>Fachrichtung</li></a>
+            <a href="index.html" class = "liheader"><li>startseite</li></a>
+          </ul>
+
+      </div>
+    </div>
+    <br clear="all">
+
+
+    <img src="bilder\pb.jpg" alt="Profilbild" class="pb">
+
+    <p>
+      Ich hei&szlig;e Benno steinegger und bin 17 jahre alt. ich wohne in st. pauls und besuche die 4. klasse der wirtschaftsfachoberschule bozen mit dem schwerpunkt
+      wirtschaftsinformatik.
+
+    </p>
+    <br>
+    <p class="button" id="button">
+      <a href="hobby.html" id = "button">
+        <button type="button" name="button">hobby</button>
+      </a>
+      <a href="fachrichtung.html" id="button">
+        <button type="button" name="button">Fachrichtung</button>
+      </a>
+    </p>
+    -->
+    <!--LOADING ANIMATION-->
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+    </div>
+    <script>
+        $(window).on("load", function() {
+            $(".loader-wrapper").delay(1500).fadeOut("slow");
+        });
+    </script>
+</body>
+
+</html>
