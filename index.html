@@ -5,7 +5,16 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,400,700&display=swap" rel="stylesheet">
-    <title>Fachrichtung</title>
+
+    <!-- fuer FF, Chrome, Opera -->
+    <link rel="icon" type="bilder/icon" href="/assets/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="bilder/icon" href="/assets/favicons/favicon-32x32.png" sizes="32x32">
+
+    <!-- fuer olte (internet explorer) -->
+    <link rel="icon" type="bilder/icon" href="/assets/favicons/favicon.ico">
+    <link rel="shortcut icon" type="bilder/icon" href="/assets/favicons/favicon.ico" />
+
+    <title>Home</title>
 </head>
 
 <body>
@@ -13,8 +22,8 @@
     <nav>
         <div class="logo">
             <a href="index.html" class="logo">
-      Benno <span class="ste">Steinegger</span>
-      </a>
+              Benno <span class="ste">Steinegger</span>
+            </a>
         </div>
         <ul class="nav-links">
             <li><a href="hobby.html">Hobby</a></li>
@@ -60,17 +69,20 @@
         navSlide();
     </script>
 
-    <h1>fachrichtung</h1>
+
+    <img src="bilder\pb.jpg" alt="Profilbild" class="pb">
+
     <p>
-        Die wi-fachrichtung bevorzuge ich gegen&uuml;ber jeder anderen fachrichtung, weil mir der informatikunterricht gut gef&auml;llt und die vorteile einer laptop-klasse nicht mehr missen will. f&uuml;r das programm des informatikunterrichtes w&uuml;nsche
-        ich mir eigentlich kein spezifisches thema, sondern gr&ouml;&szlig;ere Projekte. die sch&uuml;ler sollten die freie wahl haben, was und wie sie es machen. im projekt sollte das erlente wissen der vorherigen jahre angewendet werden, muss es aber
-        nicht. eine andere m&ouml;glichkeit den informatikunterricht interessanter zu gestalten w&auml;re, die klasse in verschiedene kleinere gruppen aufzuteilen und jeder eine (verschiedene) problemstellung zu geben. diese sollte innerhalb einer gewissen
-        stundenanzahl gel&ouml;st werden und im anschluss der klasse pr&auml;sentiert werden.
-        <br>
+        Ich hei&szlig;e Benno steinegger und bin 17 jahre alt. ich wohne in st. pauls und besuche die 4. klasse der wirtschaftsfachoberschule bozen mit dem schwerpunkt wirtschaftsinformatik.
+
     </p>
-    <p class="button">
-        <a href="steinegger.html" id="button">
-            <button type="button" name="button">HOME</button>
+    <br>
+    <p class="button" id="button">
+        <a href="hobby.html" id="button">
+            <button type="button" name="button">hobby</button>
+        </a>
+        <a href="fachrichtung.html" id="button">
+            <button type="button" name="button">Fachrichtung</button>
         </a>
     </p>
     <!--LOADING ANIMATION-->
@@ -82,7 +94,6 @@
             $(".loader-wrapper").delay(1500).fadeOut("slow");
         });
     </script>
-
 </body>
 
 </html>
