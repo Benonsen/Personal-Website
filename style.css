@@ -499,7 +499,7 @@ nav {
     }
 }
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+@media only screen and (max-width: 320px) {
     .logo {
         font-size: 20px;
     }
@@ -546,4 +546,31 @@ nav {
 
 .navschrift {
     color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .middle {
+        margin-top: 350px;
+    }
+    h3 {
+        color: black;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .middle {
+        margin-top: 350px;
+    }
+    h3 {
+        color: black;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .middle {
+        margin-top: 350px;
+    }
+    h3 {
+        color: black;
+    }
 }
