@@ -51,6 +51,15 @@ div.parallaxheader {
     width: 100vw;
 }
 
+div.parallaxheader1 {
+    box-sizing: border-box;
+    min-height: 100vh;
+    padding: 30vw 0 5vw;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+}
+
 h3 {
     margin-top: -100px;
     font-size: 50;
@@ -61,6 +70,28 @@ div.parallaxheader,
 div.parallaxheader:before {
     background: 50% 50% / cover;
     z-index: -1;
+}
+
+div.parallaxheader1,
+div.parallaxheader1:before {
+    background: 50% 50% / cover;
+    z-index: -1;
+}
+
+div.parallaxheader1::before {
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    background-image: url(bilder/code.jpeg);
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
 }
 
 div.parallaxheader::before {
@@ -80,6 +111,15 @@ div.parallaxheader::before {
 }
 
 div.parallaxheader * {
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    text-align: center;
+    margin: 0;
+    padding: 1em 0;
+    z-index: -1;
+}
+
+div.parallaxheader1 * {
     font-weight: normal;
     letter-spacing: 0.2em;
     text-align: center;
@@ -122,25 +162,29 @@ div.parallaxheader * {
     font-size: 30;
 }
 
-.navigation {
+.nav-heade {
     float: right;
     height: 100%;
     z-index: -1;
 }
 
-.navigation a {
+.nav-heade a {
     height: 100%;
     display: table;
     float: right;
     padding: 0px 20px;
 }
 
-.navigation a li {
+.nav-heade a li {
     display: table-cell;
     vertical-align: middle;
     height: 100%;
     color: #ffffff;
     font-size: 15;
+}
+
+.nav-heade a:hover {
+    color: white;
 }
 
 video {
@@ -400,7 +444,7 @@ input[name="r"] {
     }
 }
 
-nav {
+.nav-header {
     display: flex;
     justify-content: space-around;
     align-items: center;
