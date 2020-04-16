@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lightslider.css">
+    <link rel="stylesheet" href="slider.css">
+</head>
+
+<body>
+
+    <!-- slider starts  -->
+    <div class="container-fluid" id="container" style="width:85%;">
+        <!-- slider -->
+        <ul id="autoWidth" class="cS-hidden">
+            <!-- 1 -->
+            <li class="item-a">
+
+                <div class="box">
+
+                    <img src="img/1.jpg" class="model">
+
+
+                </div>
+
+            </li>
+            <!-- 2 -->
+            <li class="item-a">
+
+                <div class="box">
+
+                    <img src="img/1.jpg" class="model">
+
+
+                </div>
+
+            </li>
+            <!-- 3 -->
+            <li class="item-a">
+
+                <div class="box">
+
+                    <img src="img/1.jpg" class="model">
+
+
+                </div>
+
+            </li>
+            <!-- 4 -->
+            <li class="item-a">
+
+                <div class="box">
+
+                    <img src="img/1.jpg" class="model">
+
+
+                </div>
+
+            </li>
+            <!-- 5 -->
+            <li class="item-a">
+
+                <div class="box">
+
+                    <img src="img/1.jpg" class="model">
+
+                </div>
+
+            </li>
+            <!-- 6 -->
+            <li class="item-a">
+
+                <div class="box">
+
+                    <img src="img/1.jpg" class="model">
+
+
+                </div>
+
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="index.html">link</a>
+            </li>
+        </ul>
+
+    </div>
+    <!-- slider ends -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="lightslider.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('#autoWidth').lightSlider({
+                autoWidth: true,
+                loop: true,
+                onSliderLoad: function() {
+                    $('#autoWidth').removeClass('cS-hidden');
+                }
+            });
+        });
+    </script>
+    <script>
+        //Initializing   aninations
+
+
+        //Small carosel code set here
+        jQuery('.carousel1[data-type="multi"] .item').each(function() {
+            var next = jQuery(this).next();
+            if (!next.length) {
+                next = jQuery(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo(jQuery(this));
+
+            for (var i = 0; i < 2; i++) {
+                next = next.next();
+                if (!next.length) {
+                    next = jQuery(this).siblings(':first');
+                }
+                next.children(':first-child').clone().appendTo($(this));
+            }
+        });
+        //Ending of small carosel
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lightslider.css">
+    <link rel="stylesheet" href="slider.css">
+    <title>Hobby</title>
+</head>
+
+<body>
+
+
+    <nav class="nav-header">
+        <div class="logo">
+            <a href="index.html" class="logo">
+          Benno <span class="ste">Steinegger</span>
+          </a>
+        </div>
+        <ul class="nav-links1">
+            <li class="123"><a href="hobby.html">Hobby</a></li>
+            <li class="123"><a href="fachrichtung.html">Fachrichtung</a></li>
+            <li class="123"><a href="index.html">startseite</a></li>
+            <li class="123">
+                <a href="code.html">Code</a>
+            </li class="123">
+
+        </ul>
+        <div class="burger123">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+
+    <script type="text/javascript">
+        const navSlide = () => {
+            const burger = document.querySelector('.burger123');
+            const nav = document.querySelector('.nav-links1');
+            const navLinks = document.querySelectorAll('.nav-links1 li');
+
+            burger.addEventListener('click', () => {
+                //Nav oeffnen
+                nav.classList.toggle('nav-active');
+                //Burger ANIMATION
+                burger.classList.toggle('toggle');
+                //Schriften animieren
+                navLinks.forEach((link, index) => {
+                    if (link.style.animation) {
+
+                    } else {
+                        link.style.animation = 'navLinkFade 0.5s ease forwards';
+                    }
+                    //bug to fix
+                    // ${index / 5 + 0.3}s
+                });
+
+
+            });
+
+        }
+
+        navSlide();
+    </script>
+
+    <div class="parallax">
+        <div class="parallaxheader1">
+            <h3>Code</h3>
+
+        </div>
+        <section>
+            <br><br>
+            <h1>code</h1>
+            <br>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+            </p>
+            <h1>
+                Projekte
+            </h1>
+
+
+
+            <!-- slider starts  -->
+            <div class="container-fluid" id="container" style="width:85%;">
+                <!-- slider -->
+                <ul id="autoWidth" class="cS-hidden">
+                    <!-- 1 -->
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="img/1.jpg" class="model">
+
+
+                        </div>
+
+                    </li>
+                    <!-- 2 -->
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="img/1.jpg" class="model">
+
+
+                        </div>
+
+                    </li>
+                    <!-- 3 -->
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="img/1.jpg" class="model">
+
+
+                        </div>
+
+                    </li>
+                    <!-- 4 -->
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="img/1.jpg" class="model">
+
+
+                        </div>
+
+                    </li>
+                    <!-- 5 -->
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="img/1.jpg" class="model">
+
+                        </div>
+
+                    </li>
+                    <!-- 6 -->
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="img/1.jpg" class="model">
+
+
+                        </div>
+
+                    </li>
+                </ul>
+
+
+            </div>
+            <!-- slider ends -->
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <script src="lightslider.js"></script>
+
+
+            <script>
+                $(document).ready(function() {
+                    $('#autoWidth').lightSlider({
+                        autoWidth: true,
+                        loop: true,
+                        onSliderLoad: function() {
+                            $('#autoWidth').removeClass('cS-hidden');
+                        }
+                    });
+                });
+            </script>
+            <script>
+                //Initializing   aninations
+
+
+                //Small carosel code set here
+                jQuery('.carousel1[data-type="multi"] .item').each(function() {
+                    var next = jQuery(this).next();
+                    if (!next.length) {
+                        next = jQuery(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo(jQuery(this));
+
+                    for (var i = 0; i < 2; i++) {
+                        next = next.next();
+                        if (!next.length) {
+                            next = jQuery(this).siblings(':first');
+                        }
+                        next.children(':first-child').clone().appendTo($(this));
+                    }
+                });
+                //Ending of small carosel
+            </script>
+            <!-- slider ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
