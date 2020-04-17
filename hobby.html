@@ -3,8 +3,12 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="newstyle.css" />
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="lightslider.css">
+    <link rel="stylesheet" href="slider.css">
     <title>Hobby</title>
 </head>
 
@@ -75,57 +79,127 @@
                 survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
                 desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
             </p>
-            <div class="slidershow middle">
 
-                <div class="slides">
+            <!-- slider starts  -->
+            <div class="container-fluid" id="container" style="width:85%;">
+                <!-- slider -->
+                <ul id="autoWidth" class="cS-hidden">
+                    <!-- 1 -->
 
-                    <input type="radio" name="r" id="r1" checked>
-                    <input type="radio" name="r" id="r2">
-                    <input type="radio" name="r" id="r3">
-                    <input type="radio" name="r" id="r4">
-                    <input type="radio" name="r" id="r5">
-                    <div class="slide s1">
-                        <img src="bilder/klipp.jpeg" alt="234234">
-                    </div>
-                    <div class="slide">
-                        <img src="bilder/schaf.jpg" alt="234234">
-                    </div>
-                    <div class="slide">
-                        <img src="bilder/gas.jpeg" alt="234234">
-                    </div>
-                    <div class="slide">
-                        <img src="bilder/weiher.jpeg" alt="234">
-                    </div>
-                    <div class="imgnavigation">
-                        <label for="r1" class="bar"></label>
-                        <label for="r2" class="bar"></label>
-                        <label for="r3" class="bar"></label>
-                        <label for="r4" class="bar"></label>
-                    </div>
-                </div>
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="bilder/gas.jpeg" class="model">
+
+
+                        </div>
+
+                    </li>
+
+                    <!-- 2 -->
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="bilder/klipp.jpeg" class="model">
+
+
+                        </div>
+
+                    </li>
+                    <!-- 3 -->
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="bilder/schaf.jpg" class="model">
+
+
+                        </div>
+
+                    </li>
+                    <!-- 4 -->
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="bilder/weiher.jpeg" class="model">
+
+
+                        </div>
+
+                    </li>
+                    <li class="item-a">
+
+                        <div class="box">
+
+                            <img src="bilder/klipp2.jpeg" class="model">
+
+
+                        </div>
+
+                    </li>
+
+                </ul>
+
 
             </div>
+            <!-- slider ends -->
 
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+            <script src="lightslider.js"></script>
+
+
+            <script>
+                $(document).ready(function() {
+                    $('#autoWidth').lightSlider({
+                        autoWidth: true,
+                        loop: true,
+                        onSliderLoad: function() {
+                            $('#autoWidth').removeClass('cS-hidden');
+                        }
+                    });
+                });
+            </script>
+            <script>
+                //Initializing   aninations
+
+
+                //Small carosel code set here
+                jQuery('.carousel1[data-type="multi"] .item').each(function() {
+                    var next = jQuery(this).next();
+                    if (!next.length) {
+                        next = jQuery(this).siblings(':first');
+                    }
+                    next.children(':first-child').clone().appendTo(jQuery(this));
+
+                    for (var i = 0; i < 2; i++) {
+                        next = next.next();
+                        if (!next.length) {
+                            next = jQuery(this).siblings(':first');
+                        }
+                        next.children(':first-child').clone().appendTo($(this));
+                    }
+                });
+                //Ending of small carosel
+            </script>
+            <!-- slider ends -->
+
+
+            <div>
+                <p class="button1">
+                    <a href="index.html" id="button">
+                        <button type="button" name="button">HOME</button>
+                    </a>
+                </p>
+            </div>
         </section>
     </div>
-    <p class="button1">
-        <a href="index.html" id="button">
-            <button type="button" name="button">HOME</button>
-        </a>
-    </p>
 
 
 
-    <!--LOADING ANIMATION-->
-
-    <div class="loader-wrapper">
-        <span class="loader"><span class="loader-inner"></span></span>.
-    </div>
-    <script type="text/javascript">
-        $(window).on("load", function() {
-            $(".loader-wrapper").delay(1500).fadeOut("slow");
-        });
-    </script>
 
 
 
