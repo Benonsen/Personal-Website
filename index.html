@@ -19,19 +19,25 @@
 
 <body>
 
-    <nav>
+
+
+
+    <nav class="nav-header">
         <div class="logo">
             <a href="index.html" class="logo">
-              Benno <span class="ste">Steinegger</span>
-            </a>
+          Benno <span class="ste">Steinegger</span>
+          </a>
         </div>
-        <ul class="nav-links">
-            <li><a href="hobby.html">Hobby</a></li>
-            <li><a href="fachrichtung.html">Fachrichtung</a></li>
-            <li><a href="index.html">startseite</a></li>
+        <ul class="nav-links1">
+            <li class="123"><a href="hobby.html">Hobby</a></li>
+            <li class="123"><a href="fachrichtung.html">Fachrichtung</a></li>
+            <li class="123"><a href="index.html">startseite</a></li>
+            <li class="123">
+                <a href="code.html">Code</a>
+            </li class="123">
 
         </ul>
-        <div class="burger">
+        <div class="burger123">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
@@ -39,11 +45,11 @@
     </nav>
 
 
-    <script>
+    <script type="text/javascript">
         const navSlide = () => {
-            const burger = document.querySelector('.burger');
-            const nav = document.querySelector('.nav-links');
-            const navLinks = document.querySelectorAll('.nav-links li');
+            const burger = document.querySelector('.burger123');
+            const nav = document.querySelector('.nav-links1');
+            const navLinks = document.querySelectorAll('.nav-links1 li');
 
             burger.addEventListener('click', () => {
                 //Nav oeffnen
